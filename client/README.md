@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# VossAgro - Frontend (Client)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the frontend of the VossAgro platform. This is a modern React application built to provide a seamless experience for farmers, buyers, and investors in Ghana's agricultural ecosystem.
 
-## Available Scripts
+## 🌟 Project Overview
+VossAgro is an all-in-one agricultural ecosystem designed for Ghana. It connects farmers, buyers, and investors through:
+- **Marketplace**: Buy and sell fresh produce.
+- **Funding Hub**: Access grants and investment opportunities.
+- **Land Access**: Lease or list farmland.
+- **AI Insights**: Region-specific agricultural data and price predictions.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Technical Evolution: From CRA to Vite
+This project has a rich technical history. It was originally bootstrapped with **Create React App (CRA)** by the initial development team. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To improve developer experience, build speeds, and overall performance, the project was migrated to **Vite**. 
+- **Why?**: Vite provides near-instant Hot Module Replacement (HMR) and significantly faster build times compared to CRA's Webpack-based setup.
+- **Process**: We maintained the original project structure and git history to honor the initial work while modernizing the underlying build tooling.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- **Node.js** (v18 or higher recommended)
+- **NPM** (comes with Node.js)
 
-### `npm run build`
+### Installation
+1. Navigate to the client directory:
+   ```bash
+   cd client
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Available Scripts
+In the `client` directory, you can run:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **`npm run dev`**: Runs the app in development mode with Vite. Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+- **`npm run build`**: Builds the app for production to the `dist` folder.
+- **`npm run preview`**: Locally preview the production build.
+- **`npm run lint`**: Run ESLint to check for code quality issues.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Project Structure
+- `src/components`: Reusable UI components (using Tailwind CSS and Lucide icons).
+- `src/pages`: Main page views (Marketplace, Dashboard, etc.).
+- `src/context`: React Context for state management (Auth, Cart).
+- `public`: Static assets like logos and icons.
+- `tailwind.config.js`: Custom styling configuration.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛡️ Authentication
+The client uses **JWT (JSON Web Tokens)** for security.
+- Tokens are stored in `localStorage` as `user_token` or `admin_token`.
+- The application dynamically adjusts the UI based on the `active_role`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📈 Future Roadmap
+- **Cloud Storage**: Moving to AWS S3/Cloudinary for image uploads.
+- **Payments**: Integrating Paystack/Flutterwave for MoMo and Card payments.
+- **Mobile App**: Potential transition to a PWA or React Native.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For a deeper dive into the business logic and admin management, please refer to the [Owner's Guide](../OWNERS_GUIDE.md) in the root directory.
